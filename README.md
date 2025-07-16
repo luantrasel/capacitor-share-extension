@@ -206,7 +206,16 @@ public class MainActivity extends BridgeActivity {
    @Override
    public void onCreate(Bundle savedInstanceState) {
      super.onCreate(savedInstanceState);
-     ...
+     
+     if (!isTaskRoot()) {
+        Intent newIntent = new Intent(getIntent());
+        newIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(newIntent);
+        finish();
+        return;
+    }
+
+    // Usual initialization code here
    }
    
 +  @Override
