@@ -9,29 +9,24 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import { WebPlugin } from '@capacitor/core';
 export class ShareExtensionWeb extends WebPlugin {
-    constructor() {
-        super({
-            name: 'ShareExtension',
-            platforms: ['web']
-        });
-    }
     checkSendIntentReceived() {
         return __awaiter(this, void 0, void 0, function* () {
-            return { title: null };
+            return { payload: [] };
+        });
+    }
+    clearKeychainData() {
+        return __awaiter(this, void 0, void 0, function* () {
+            return undefined;
         });
     }
     finish() {
-    }
-    saveDataToKeychain(options) {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log('save', options);
-            return 'not implemented yet for web';
+            return { success: true };
         });
     }
-    clearKeychainData(options) {
+    saveDataToKeychain() {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log('clear completed', options);
-            return;
+            return "";
         });
     }
 }
