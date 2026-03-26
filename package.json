@@ -57,7 +57,7 @@
     "url": "https://github.com/calvinckho/capacitor-share-extension"
   },
   "engines": {
-    "node": ">=24"
+    "node": ">=22"
   },
   "bugs": {
     "url": "https://github.com/calvinckho/capacitor-share-extension/issues"
